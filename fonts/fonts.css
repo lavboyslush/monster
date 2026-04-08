@@ -1,0 +1,29 @@
+@font-face {
+    font-family: comic;
+    src: url(comic-neue/ComicNeue-Regular.woff    );
+
+}
+
+@font-face {
+    font-family: comicbold;
+    src: url(comic-neue/ComicNeue-Angular-Bold.woff    );
+
+}
+
+@font-face {
+    font-family: tuscan;
+    src: url(MLB-Tuscan/MLBBLOCK.TTF);
+
+}
+@font-face {
+    font-family: monster;
+    src: url(Monster-font/Green_Energy/Green_Energy.ttf);
+
+}
+
+@font-face {
+    font-family: war;
+    src: url(war-wound/WarWound.otf) format("opentype");
+
+
+}
