@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUNG DOLPH</title>
+</head>
+<style>
+    * {
+
+        padding: 0;
+        margin: 0;
+
+
+    }
+
+    html {
+        scrollbar-gutter: stable;
+    }
+
+    body {
+        width: 100vw;
+
+        background: white;
+
+        background-image: url(backgrounds/bg.jpeg);
+
+
+
+    }
+
+    #manifest {
+
+
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        top: 30svh;
+
+
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .huge {
+        font-size: 10vw;
+    }
+
+    .big {
+        font-size: 5vw;
+    }
+
+    .medium {
+        font-size: 4vw;
+    }
+
+    .small {
+        font-size: 3vw;
+    }
+
+    .comic {
+        font-family: comic;
+        color: black;
+        -webkit-text-stroke: 1.5px brown;
+    }
+
+    #yd {
+        position: absolute;
+        width: 100vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #yd img {
+        position: absolute;
+
+    }
+
+    #yddiv {
+        position: absolute;
+        top: 230svh;
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+
+        height: 100svh;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    #yddiv img {
+        position: relative;
+
+        margin: 3vw;
+    }
+
+
+
+
+    #bubble {
+
+        top: 150svh;
+        width: 50vw;
+
+        pointer-events: none;
+    }
+
+    #plate {
+
+        width: 21vw;
+    }
+
+    #ripyd {
+
+        width: 21vw;
+    }
+
+    #main {
+        font-size: 4vw;
+
+        width: 100vw;
+        height: 100svh;
+        top: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+
+        font-family: war;
+    }
+
+    #main img {
+        width: 50vw;
+    }
+
+    #main p {
+        position: absolute;
+        font-size: 6vw;
+    }
+
+    #top5 {
+        position: absolute;
+        top: 68svh;
+        width: 100vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        font-family: comic;
+
+    }
+
+    #platesongdiv {
+        height: 27vw;
+
+
+    }
+
+    #platesongdiv p {
+
+        position: relative;
+        top: -23.5vw;
+        font-size: 3.5vw;
+
+
+
+        color: brown;
+        -webkit-text-stroke: 1px black;
+        cursor: pointer;
+    }
+
+    #platesongdiv p:hover {
+        color: white;
+
+    }
+
+    #platesong {
+        width: 50vw;
+        pointer-events: none;
+    }
+
+
+
+    #vid {
+        top: 21vw;
+        width: 32vw;
+        position: absolute;
+        z-index: 2;
+        border-radius: 1vw;
+        display: none;
+    }
+
+    #vidimg {
+        z-index: 1;
+        top: 21vw;
+        width: 32vw;
+        position: absolute;
+
+        display: none;
+        border-radius: 1vw;
+    }
+
+
+    @media (max-width: 600px) {
+        #manifest {
+            top: 30svh;
+
+        }
+
+        .comic {
+            -webkit-text-stroke: 1px brown;
+        }
+
+        .huge {
+            font-size: 12vw;
+        }
+
+        .big {
+            font-size: 10vw;
+        }
+
+        .medium {
+            font-size: 8vw;
+        }
+
+        .small {
+            font-size: 5vw;
+        }
+
+        #yddiv {
+            flex-direction: column;
+            top: 240svh;
+        }
+
+        #yddiv img {
+            position: relative;
+
+            padding: 10vw;
+        }
+
+        #bubble {
+
+            top: 135svh;
+            width: 100vw;
+
+        }
+
+        #plate {
+
+            width: 80vw;
+        }
+
+        #ripyd {
+
+            width: 80vw;
+
+        }
+
+        #main {
+            font-size: 11vw;
+        }
+
+        #main img {
+            width: 100vw;
+        }
+
+        #main p {
+
+            font-size: 10vw;
+        }
+
+        #top5 {
+
+            top: 70svh;
+            width: 100vw;
+        }
+
+        #top5img {
+            width: 70vw;
+        }
+
+        #platesongdiv {
+            margin-top: 10vw;
+        }
+
+        #platesong {
+            width: 100vw;
+
+            pointer-events: none;
+        }
+
+        #platesongdiv p {
+
+
+            top: -45vw;
+            font-size: 6vw;
+
+
+
+            color: brown;
+            -webkit-text-stroke: 0.5px black;
+            cursor: pointer;
+        }
+
+        #vid {
+            top: 63vw;
+            width: 62vw;
+            position: absolute;
+            z-index: 2;
+            border-radius: 1vw;
+            display: none;
+        }
+
+        #vidimg {
+            z-index: 1;
+            top: 63vw;
+            width: 62vw;
+            position: absolute;
+
+            display: none;
+            border-radius: 1vw;
+        }
+    }
+</style>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="logos/logo.css">
+<link rel="stylesheet" href="boom/boom.css" />
+
+<body>
+    <div id="bg">
+        <img id="doorleft" src="backgrounds/door1.png" alt="">
+        <img id="doorright" src="backgrounds/door2.png" alt="">
+    </div>
+
+    <div id="top">
+        <div onclick="go('index.html')"><img src="logos/x1.png" alt=""></div>
+        <div onclick="go('gallery.html')"><img src="logos/x2.png" alt=""></div>
+        <div onclick="go('manifest.html')"><img src="logos/x3.png" alt=""></div>
+
+    </div>
+
+    <div id="main">
+        <img src="logos/mmniplate.png" alt="">
+        <p>young dolph</p>
+    </div>
+
+    <div id="top5">
+        <img id="top5img" src="logos/top5.png" alt="">
+
+
+        <video onclick="start()" autoplay="true" playsinline="true" id="vid"
+            src="sound/Young Dolph - Still Smell Like It.mp4"></video>
+
+        <img onclick="start()" id="vidimg" src="sound/summo.jpg" alt="">
+        <div id="platesongdiv">
+
+            <img id="platesong" src="logos/plate.png" alt="">
+
+            <p onclick="picksong('whileuhere' ,this)">WHILE U HERE</p>
+            <p onclick="picksong('summo', this)">SUMMO'</p>
+            <p onclick="picksong('sacrifices', this)">SACRIFICES</p>
+            <p onclick="picksong('smelllikeit', this)">SMELL LIKE IT</p>
+            <p onclick="picksong('onehellofalife',this)">1 HELL OF A LIFE</p>
+        </div>
+
+    </div>
+
+
+    <div id="yd">
+        <img id="bubble" src="logos/yd speech.png" alt="">
+
+        <div id="yddiv">
+            <img id="plate" src="logos/yd2.png" alt="">
+            <img id="ripyd" src="logos/ripyd.png" alt="">
+        </div>
+    </div>
+</body>
+
+<script src="boom/boom.js"></script>
+
+<script>
+
+    const vid = document.getElementById('vid');
+    const vidimg = document.getElementById('vidimg');
+
+
+    let playing = false;
+
+    function start(el) {
+        if (!playing) {
+
+            playing = true
+            vid.style.display = 'block';
+            vid.currentTime = 0;
+            vid.play();
+
+            vidimg.style.display = 'block';
+
+            vid.oncanplay = () => {
+                const paragraphs = platesongdiv.querySelectorAll('p');
+                paragraphs.forEach(p => {
+                    if (p.dataset.originalText) {
+                        p.textContent = p.dataset.originalText;
+                    }
+                });
+            };
+        } else {
+
+            vid.pause();
+            vid.style.display = 'none';
+            playing = false;
+
+            vidimg.style.display = 'none';
+
+
+
+
+        }
+    }
+
+
+    function picksong(song, el) {
+
+        if (!el.dataset.originalText) {
+            el.dataset.originalText = el.textContent;
+        }
+        el.textContent = "loading...";
+
+        if (song == 'whileuhere') {
+
+
+
+            vid.src = "sound/Young Dolph - While U Here (Official Video) - YoungDolphVEVO (240p, h264).mp4"
+            vidimg.src = '';
+            start(el);
+        }
+        else if (song == 'summo') {
+
+
+            vid.src = "sound/Young Dolph - Summo’.mp3"
+            vidimg.src = 'sound/summo.jpg'
+            start(el);
+        }
+        else if (song == 'sacrifices') {
+
+
+            vid.src = "sound/Sacrifices - Young Dolph.mp3"
+            vidimg.src = 'sound/sacrifices.jpg'
+            start(el);
+        }
+        else if (song == 'smelllikeit') {
+
+
+            vid.src = "sound/Young Dolph - Still Smell Like It.mp4"
+            vidimg.src = ''
+            start(el);
+        }
+        else if (song == 'onehellofalife') {
+
+            vid.src = "sound/Young Dolph, Key Glock - 1 Hell of a Life.mp4"
+            vidimg.src = ''
+            start(el);
+        }
+    }
+</script>
+
+</html>

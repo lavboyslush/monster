@@ -1,0 +1,130 @@
+#top {
+    z-index: 40;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 25svh;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../logos/mmniplate.png);
+    background-position: center;
+    background-size: 25vw;
+    background-repeat: no-repeat;
+}
+
+#top div {
+    width: 7vw;
+    height: 7vw;
+
+    margin: 0vw;
+
+
+
+}
+
+#top div img {
+    width: 100%;
+
+}
+
+#top div img:hover {
+    scale: 0.9;
+}
+
+
+#top>div {
+    position: relative;
+    display: inline-block;
+}
+
+#top div::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url("fire.png") center center no-repeat; */
+    background-size: contain;
+    /* or cover depending on effect */
+    pointer-events: none;
+    /* allows clicks to pass through */
+    z-index: 2;
+    opacity: 0;
+}
+
+#top div:hover::after,
+#top div.active::after {
+    opacity: 1;
+
+}
+
+@keyframes fall {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 100vh;
+        opacity: 0.5;
+    }
+}
+
+.falling {
+    position: absolute;
+    animation: fall 3s linear forwards;
+}
+
+.divfire{
+    top: 0;
+
+    width: 100vw;
+    height: 100svh;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    position: absolute;
+}
+.fire{
+    width: 50vw;
+    top: 0;
+  
+   
+
+}
+
+@media (max-width: 600px) {
+    #top {
+
+        height: 30svh;
+
+        background-image: url(../logos/mmniplate.png);
+        background-position: center;
+        background-size: 100vw;
+        background-repeat: no-repeat;
+    }
+
+    #top div {
+        width: 25vw;
+        height: 25vw;
+
+        margin: 0vw;
+    }
+
+    
+    .fire{
+        width: 200vw;
+    }
+}

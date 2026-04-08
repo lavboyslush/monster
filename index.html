@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY MYSELF & I</title>
+
+
+    <meta name="description" content="website of Gian Battista Felder">
+
+    <link rel="icon" href="logos/logotrans.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="logos/logo.jpg" sizes="180x180">
+
+    <meta name="keywords"
+        content="Gian Battista Felder, Monster Energy Switzerland, Monsterenergyswitzerland, energy drink events, Switzerland Monster Energy">
+
+
+    <meta property="og:title" content="Monsterenergyswitzerland">
+    <meta property="og:description" content="website of Gian Battista Felder">
+    <meta property="og:image" content="looks.png">
+    <meta property="og:url" content="https://monsterenergyswitzerland.com">
+    <meta property="og:type" content="website">
+
+      <link rel="canonical" href="https://monsterenergyswitzerland.com/" />
+
+    <link rel="stylesheet" href="fonts/fonts.css" />
+
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        cursor: none;
+        box-sizing: border-box;
+
+        user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+
+
+    }
+
+    body {
+        background-image: url(backgrounds/bg.jpeg);
+    }
+
+
+
+    section {
+        height: 100svh;
+        width: 100vw;
+        overflow: hidden;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
+
+    p,
+    a {
+        font-size: 4vw;
+        font-family: comic;
+        color: black;
+        text-decoration: none;
+
+    }
+
+    p:hover {
+        color: rgb(218, 0, 0);
+    }
+
+
+
+
+
+
+
+    #back {
+        width: 100vw;
+        height: 100svh;
+    }
+
+    #head {
+        z-index: 1;
+        position: absolute;
+        width: 100vw;
+        height: 100svh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+
+
+    }
+
+    #mainphotodiv {
+        width: 50vw;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #mainphotodiv img {
+
+
+        position: absolute;
+        object-fit: cover;
+        width: 50vw;
+    }
+
+    #mainphotodiv:hover #hashphoto {
+        transform: scale(1);
+
+        transition: transform 0.2s ease-in-out;
+    }
+
+    #hashphoto {
+        transform: scale(0);
+    }
+
+
+
+
+    .yphotos {
+        width: 20vw;
+    }
+
+    .yphotos:hover {
+        scale: 0.9;
+    }
+
+    #head p {
+
+        color: rgb(0, 0, 0);
+        margin-top: 2vw;
+        /* transform: scaleY(3); */
+
+        width: 100vw;
+        text-align: center;
+        background-color: white;
+    }
+
+    #depopdiv {
+        position: absolute;
+        width: 100vw;
+        height: 7vw;
+        text-align: left;
+        /* background-color: rgb(0, 0, 0); */
+        background-image: url(backgrounds/depopback.png);
+        background-repeat: no-repeat;
+        background-size: 100vw auto;
+        background-position: center;
+        bottom: 2.5vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        z-index: 2;
+
+    }
+
+    #depopscroll {
+        width: 85vw;
+        height: 7vw;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .scroll-track {
+        display: flex;
+        width: 200%;
+        /* double width to fit two sets */
+        animation: scroll-left 30s linear infinite;
+    }
+
+    .scroll-track img {
+        width: 50vw;
+        flex-shrink: 0;
+    }
+
+    .scroll-track img:hover {
+        transform: scale(0.9);
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+
+
+    #hdd {
+
+        top: 100svh;
+        position: absolute;
+        z-index: 1;
+        width: 100vw;
+        height: 100svh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+
+
+
+
+    #profilepic {
+        width: 20vw;
+        height: auto;
+    }
+
+    #profdiv {
+        z-index: 2;
+        display: flex;
+        flex-direction: row;
+
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+    }
+
+    #profdiv p,
+    #profdiv a {
+
+        font-family: 'comicbold';
+    }
+
+
+    .platediv {
+
+        width: 50vw;
+        height: 45svh;
+
+        text-align: left;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        background-image: url(logos/plate.png);
+        background-size: 47vw;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+
+
+    #mep p {
+        font-size: 1.3vw;
+        line-height: 0.8;
+    }
+
+
+    #wanteddiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        outline: 4px solid black;
+
+
+    }
+
+    #wanteddiv p {
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #wanteddiv img {
+        width: 8vw;
+        height: auto;
+    }
+
+    #wanted {
+        color: red;
+
+        font-size: 5vw;
+        font-weight: bold;
+
+
+    }
+
+    #wantedby {
+        font-weight: bold;
+    }
+
+    .wantedinfo {
+        font-size: 1.8vw;
+    }
+
+    #plate {
+        width: 85vw;
+        position: absolute;
+        z-index: 0;
+    }
+
+    #mmni {
+        width: 40vw;
+    }
+
+    #monsterplate {
+        display: none;
+    }
+
+    #profilepic {
+        transition: opacity 0.3s ease;
+        /* smooth fade */
+    }
+
+    #profilepic.fade-out {
+        opacity: 0;
+    }
+
+    #meplate {
+        text-align: center;
+        width: 80vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+    }
+
+    #meplate div {
+        position: absolute;
+        top: 0;
+    }
+
+    #meplate p {
+        font-family: 'war';
+        position: absolute;
+        font-size: 4vw;
+
+    }
+
+
+    #rights {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100vw;
+        height: 4svh;
+        pointer-events: none;
+        font-size: 1vw;
+        margin: 1.2vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: "comic";
+
+        background-image: url(backgrounds/depopback.png);
+        background-position: center;
+        background-size: 30vw;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+    @media (max-width: 600px) {
+
+        body {
+            background-image: url(backgrounds/bgphone.jpeg);
+        }
+
+        p,
+        a {
+            font-size: 11vw;
+        }
+
+        #depopdiv {
+            height: 20vw;
+
+            background-size: 90vw 10vw;
+            bottom: 5vw;
+        }
+
+        #depopscroll {
+
+            height: 30vw;
+            width: 70%;
+
+
+        }
+
+
+
+
+        .scroll-track img {
+            width: 80vw;
+
+        }
+
+
+        .scroll-track {
+
+            /* double width to fit two sets */
+            animation: scroll-left 10s linear infinite;
+        }
+
+
+
+
+
+        #profdiv {
+            flex-direction: column;
+            margin-top: 20svh;
+        }
+
+        #profilepic {
+            width: 40vw;
+            height: auto;
+        }
+
+        #mep p {
+            font-size: 2.4vw;
+            line-height: 0;
+        }
+
+        #mainphotodiv {
+            width: 100vw;
+            position: absolute;
+            top: 25svh;
+
+            display: block;
+        }
+
+
+
+        #mainphotodiv img {
+
+
+
+            width: 100vw;
+        }
+
+        #hdd {
+
+            background-size: 100vw;
+
+
+        }
+
+        #head {
+
+            background-size: 100vw;
+            flex-direction: row;
+
+        }
+
+        .yphotos {
+            width: 48vw;
+            margin-top: 45svh;
+
+        }
+
+        #mmni {
+            top: -2svh;
+            width: 82vw;
+            position: absolute;
+        }
+
+        .platediv {
+
+            width: 100vw;
+            height: 26svh;
+
+            text-align: left;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-image: url(logos/plate.png);
+            background-size: 90vw;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+
+        #monsterplate {
+            background-image: url(logos/monsterplate.png);
+            display: flex;
+        }
+
+        #meplate p {
+
+            font-size: 8vw;
+            top: 15vw;
+
+        }
+
+        #rights {
+            position: relative;
+            bottom: 0;
+            height: 4svh;
+            pointer-events: none;
+            font-size: 2.6vw;
+            margin: 0;
+            color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: "comic";
+
+            background-image: url(backgrounds/depopback.png);
+            background-position: center;
+            background-size: 70vw;
+            background-repeat: no-repeat;
+        }
+
+
+
+    }
+</style>
+<link rel="stylesheet" href="cursor/cursor.css" />
+<link rel="stylesheet" href="logos/logo.css" />
+<link rel="stylesheet" href="fonts/fonts.css" />
+<link rel="stylesheet" href="boom/boom.css" />
+
+<body>
+    <section>
+
+
+        <div id="bg">
+            <img id="doorleft" src="backgrounds/door1.png" alt="">
+            <img id="doorright" src="backgrounds/door2.png" alt="">
+        </div>
+
+
+
+        <img id="custom-cursor" src="cursor/monster.png" alt="cursor" />
+
+        <div id="top">
+            <div onclick="go('index.html')"><img src="logos/x1.png" alt=""></div>
+            <div onclick="go('gallery.html')"><img src="logos/x2.png" alt=""></div>
+            <div onclick="go('manifest.html')"><img src="logos/x3.png" alt=""></div>
+
+        </div>
+
+        <div id="head">
+
+            <img class="yphotos" src="logos/y1.png" alt="">
+
+            <div id="mainphotodiv">
+                <img id="mainphoto" src="logos/main.png" alt="">
+                <p></p>
+                <img id="hashphoto" src="logos/hash.png" alt="">
+            </div>
+
+            <img class="yphotos" src="logos/y2.png" alt="">
+        </div>
+
+        <div id="depopdiv">
+            <div id="depopscroll">
+                <a href="https://www.depop.com/monsterenergyswitzerlan/" target="_blank" class="scroll-track">
+                    <img src="logos/dep.png" alt="">
+                    <img src="logos/dep.png" alt="">
+                    <img src="logos/dep.png" alt="">
+                    <img src="logos/dep.png" alt="">
+
+                    <img src="logos/dep.png" alt="">
+                    <img src="logos/dep.png" alt="">
+                    <img src="logos/dep.png" alt="">
+                    <img src="logos/dep.png" alt="">
+
+
+
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div id="hdd">
+            <!-- <div id="wanteddiv">
+                <img src="logos/logotrans.png" alt="">
+                <div style="text-align: center;">
+                    <p id="wanted">WANTED</p>
+                    <p class="wantedinfo" id="wantedby">BY THE MONSTER REPUBLIC POLICE</p>
+                    <p class="wantedinfo">TROOP D, MISS MONSTER</p>
+                </div>
+                <img src="logos/logotrans.png" alt="">
+            </div> -->
+
+            <div id="meplate">
+                <img id="mmni" src="logos/mmniplate.png" alt="">
+                <p onmouseenter=" enterprofile()" onmouseleave="leaveprofile()">ME MYSELF AND I</p>
+            </div>
+
+
+            <div id="profdiv">
+                <div class="platediv" onmouseenter="leaveprofile()">
+                    <img onmouseenter=" enterprofile()" onmouseleave="leaveprofile()" id="profilepic"
+                        src="newprofilebw.png" alt="">
+
+                </div>
+                <div class="platediv" onmouseenter="leaveprofile()">
+                    <div id="mep">
+                        <p href="#" onclick="wine()" onmouseenter="wine()">
+                            CURRENT
+                            FAVORITE SONG: WINE IT
+                            UP (FEAT.SEAN PAUL)</p><br>
+                        <p href="#" onclick="capuns()" onmouseenter="capuns()">
+                            FAVORITE DISH: CAPUNS</p><br>
+                        <p href="#" onclick="cat()" onmouseenter="cat()">
+                            FAVORITE COLORS: ALL COLORS ARE BEAUTIFUL</p><br>
+                        <p href="#" onclick="drink()" onmouseenter="drink()">
+                            FAVORITE NUMBER: 1738</p><br>
+                        <p href="#" onclick="springbreakers()" onmouseenter="springbreakers()">
+                            FAVORITE MOVIE: SPRING BREAKERS</p><br>
+                        <p onclick="nicki()" onmouseenter="nicki()">CELEBRITY CRUSH: HMM LET ME THINK...NICKI MINAJ</a>
+                            <audio id="period" src="sound/period.mp3" preload="auto"></audio>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div class="platediv " id="monsterplate"></div>
+                <p id="rights">©2025 club culture mondiale. All rights reserved</p>
+            </div>
+            <!-- <img id="plate" src="logos/plate.png" alt=""> -->
+
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+</body>
+<script src="cursor/cursor.js"></script>
+<script src="boom/boom.js"></script>
+
+
+<script>
+
+
+
+
+
+
+
+    const profilepic = document.getElementById("profilepic");
+    let switched = false;
+    function enterprofile() {
+        animation();
+        profilepic.src = "newprofile1.png";
+    }
+    function leaveprofile() {
+        animation();
+        profilepic.src = "newprofilebw.png";
+    }
+    const audio = document.getElementById("period");
+    audio.load();
+    function nicki() {
+        animation();
+        profilepic.src = "profilenicki.png";
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    function springbreakers() {
+        animation();
+        profilepic.src = "clicks/spring.jpg";
+    }
+    function drink() {
+        animation();
+        profilepic.src = "clicks/1798.webp";
+    }
+
+    function cat() {
+        animation();
+        profilepic.src = "clicks/cat.gif";
+    }
+
+    function capuns() {
+        animation();
+        profilepic.src = "clicks/capuns.jpg";
+    }
+    function wine() {
+        animation();
+        profilepic.src = "clicks/wine.gif";
+    }
+
+    function animation() {
+        profilepic.classList.add("fade-out");
+
+        // After fade-out, change the image
+        setTimeout(() => {
+
+            profilepic.classList.remove("fade-out");
+        }, 200); // matches transition duration
+    }
+
+
+</script>
+
+</html>

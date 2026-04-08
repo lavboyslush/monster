@@ -1,0 +1,45 @@
+#bg img {
+    width: 100vw;
+    height: 100svh;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* No animation property here — just define keyframes */
+@keyframes doorleft {
+    10% {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes doorleft-reverse {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes doorright {
+    10% {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(+50%);
+    }
+}
+
+@keyframes doorright-reverse {
+    from {
+        transform: translateX(+50%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
